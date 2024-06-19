@@ -35,7 +35,7 @@ object TVList {
     fun init(context: Context) {
         _position.value = 0
 
-        groupModel.addTVListModel(TVListModel("我的收藏", 0))
+        groupModel.addTVListModel(TVListModel("关注「插兜的干货仓库」", 0))
         groupModel.addTVListModel(TVListModel("全部频道", 1))
 
         appDirectory = context.filesDir

@@ -38,8 +38,8 @@ class SettingFragment : Fragment() {
 
         _binding = SettingBinding.inflate(inflater, container, false)
 
-        binding.versionName.text = "当前版本: v${context.appVersionName}"
-        binding.version.text = "https://github.com/lizongying/my-tv-0"
+        binding.versionName.text = "v${context.appVersionName}"
+        binding.version.text = "关注「插兜的干货仓库」"
 
         val switchChannelReversal = _binding?.switchChannelReversal
         switchChannelReversal?.isChecked = SP.channelReversal
@@ -108,6 +108,7 @@ class SettingFragment : Fragment() {
         }
 
         val config = binding.config
+        SP.config = "";
         config.text = SP.config?.let { Editable.Factory.getInstance().newEditable(it) }
             ?: Editable.Factory.getInstance().newEditable("")
         binding.confirmConfig.setOnClickListener {
